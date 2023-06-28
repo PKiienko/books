@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [books, setBooks] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <h2 className='app-title'>Книжкові скарби</h2>
+      <div className='book-info'>
+        <input className='book-title' placeholder='Назва книги' />
+        <input className='book-author' placeholder='Автор' />
+        <input className='book-year' placeholder='Рік видання' />
+        <button className='add-button'>Додати</button>
+      </div>
     </div>
   );
 }
