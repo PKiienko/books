@@ -5,10 +5,15 @@ const BookList = ({ books }) => {
   if (books.length === 0) {
     return null;
   }
+
+  const sortedBooks = books.sort(function (a, b) {
+    return a.title.localeCompare(b.title);
+  });
+
   return (
     <div className='book-list'>
-      {books.map((book) => {
-        return <BookItem key={Math.random()} book={book} />;
+      {sortedBooks.map((sortedBook) => {
+        return <BookItem key={Math.random()} sortedBook={sortedBook} />;
       })}
     </div>
   );

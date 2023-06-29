@@ -7,11 +7,11 @@
 .app {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   min-width: 20rem;
-  background: lightgreen;
-  height: 100%;
+  background: #93b8d6;
+  height: 100vh;
 }
 
 .app-title {
@@ -36,11 +36,12 @@
 .book-author,
 .book-year {
   height: 2rem;
+  margin: 0.1rem;
   padding: 0.5rem;
   font-size: medium;
-  background: wheat;
-  border: 1px solid darkgreen;
   border-radius: 0.5rem;
+  background: #ffffff;
+  border: 1px solid #27568d;
 }
 
 .book-title {
@@ -54,12 +55,25 @@
 }
 
 .add-button {
-  height: 4rem;
-  width: 4rem;
+  height: 4.2rem;
+  width: 4.2rem;
   font-size: xx-large;
-  color: green;
-  background: wheat;
-  border: 1px solid darkgreen;
+  color: #ffffff;
+  background: #27568d;
+  border: 1px solid #27568d;
   border-radius: 0.5rem;
   margin: 0 0.5rem;
+}
+
+input:focus {
+  outline: 2px solid #27568d;
+}
+
+.add-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.add-button:active {
+  transform: scale(0.9);
 }
