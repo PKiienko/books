@@ -1,16 +1,29 @@
-.book-item {
+.book-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 13rem;
   height: 7rem;
   margin: 0.5rem;
   padding: 0.5rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  flex-direction: column;
   background: #ffffff;
   color: #333333;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.book-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.book-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 .book-item h2,
