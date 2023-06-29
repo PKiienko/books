@@ -9,4 +9,57 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  min-width: 20rem;
+  background: lightgreen;
+  height: 100%;
+}
+
+.app-title {
+  margin: 0.5rem;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+}
+
+.book-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.book-title,
+.book-author,
+.book-year {
+  height: 2rem;
+  padding: 0.5rem;
+  font-size: medium;
+  background: wheat;
+  border: 1px solid darkgreen;
+  border-radius: 0.5rem;
+}
+
+.book-title {
+  width: 20rem;
+}
+.book-author {
+  width: 15rem;
+}
+.book-year {
+  width: 5rem;
+}
+
+.add-button {
+  height: 4rem;
+  width: 4rem;
+  font-size: xx-large;
+  color: green;
+  background: wheat;
+  border: 1px solid darkgreen;
+  border-radius: 0.5rem;
+  margin: 0 0.5rem;
 }

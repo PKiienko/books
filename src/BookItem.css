@@ -1,0 +1,17 @@
+.book-item {
+  width: 13rem;
+  height: 7rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background: brown;
+  border-radius: 0.5rem;
+}
+
+.book-item h2,
+.book-item h4 {
+  text-overflow: clip;
+}
