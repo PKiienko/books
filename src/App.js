@@ -65,7 +65,7 @@ function App() {
             value={title}
             onChange={titleInputHandler}
           />
-          <div>
+          <div style={{ display: 'flex' }}>
             <input
               className='book-author'
               placeholder='Автор'
