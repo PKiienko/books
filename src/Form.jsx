@@ -21,6 +21,8 @@ const Form = ({ books, setBooks, isEditMode, bookToEdit, setIsEditMode, setBookT
       author: author,
       year: year,
       id: Math.random(),
+      favorite: false,
+      read: false,
     };
     setBooks([...books, newBook]);
     setTitle('');
@@ -34,6 +36,8 @@ const Form = ({ books, setBooks, isEditMode, bookToEdit, setIsEditMode, setBookT
       author: author,
       year: year,
       id: bookToEdit.id,
+      favorite: bookToEdit.favorite,
+      read: bookToEdit.read,
     };
     const updatedBooks = books.map((book) => (book.id === bookToEdit.id ? editedBook : book));
     setBooks(updatedBooks);

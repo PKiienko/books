@@ -15,7 +15,6 @@ function App() {
   const handleEditBook = (book) => {
     setIsEditMode(true);
     setBookToEdit(book);
-    console.log(bookToEdit);
   };
 
   // const saveBooksToLocalStorage = () => {

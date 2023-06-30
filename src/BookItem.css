@@ -13,9 +13,10 @@
 }
 
 .book-controls {
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
 }
 
@@ -29,4 +30,12 @@
 .book-item h2,
 .book-item h4 {
   text-overflow: clip;
+}
+
+.favorite {
+  color: red;
+}
+
+.book-item-button {
+  color: #27568d;
 }
