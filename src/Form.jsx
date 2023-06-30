@@ -33,7 +33,8 @@ const Form = ({ books, setBooks, isEditMode, bookToEdit, setIsEditMode, setBookT
     }
   };
 
-  const editBookHandler = () => {
+  const editBookHandler = (e) => {
+    e.preventDefault();
     if (title && author && year) {
       const editedBook = {
         title: title,
@@ -68,7 +69,6 @@ const Form = ({ books, setBooks, isEditMode, bookToEdit, setIsEditMode, setBookT
           className='book-title'
           placeholder='Назва книги'
           value={title}
-          required
           onChange={titleInputHandler}
         />
         <div style={{ display: 'flex', flex: 1 }}>
@@ -76,16 +76,9 @@ const Form = ({ books, setBooks, isEditMode, bookToEdit, setIsEditMode, setBookT
             className='book-author'
             placeholder='Автор'
             value={author}
-            required
             onChange={authorInputHandler}
           />
-          <input
-            className='book-year'
-            placeholder='Рік'
-            value={year}
-            required
-            onChange={yearInputHandler}
-          />
+          <input className='book-year' placeholder='Рік' value={year} onChange={yearInputHandler} />
         </div>
       </div>
       <button
