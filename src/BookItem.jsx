@@ -36,23 +36,37 @@ const BookItem = ({ sortedBook, books, setBooks, handleEditBook }) => {
       </div>
       <div className='book-controls'>
         {sortedBook.favorite ? (
-          <MdOutlineFavorite className={` book-item-button`} onClick={toggleFavorite} />
+          <MdOutlineFavorite
+            className={`book-item-button`}
+            onClick={toggleFavorite}
+            title={'Favorite'}
+          />
         ) : (
           <MdOutlineFavoriteBorder
             className={`favorite book-item-button`}
             onClick={toggleFavorite}
+            title={'Favorite'}
           />
         )}
         {sortedBook.read ? (
-          <BsFillBookmarkCheckFill className={` book-item-button`} onClick={toggleRead} />
+          <BsFillBookmarkCheckFill
+            className={` book-item-button`}
+            onClick={toggleRead}
+            title={'Read'}
+          />
         ) : (
-          <BsBookmarkCheck className={`favorite book-item-button`} onClick={toggleRead} />
+          <BsBookmarkCheck
+            className={`favorite book-item-button`}
+            onClick={toggleRead}
+            title={'Read'}
+          />
         )}
         <MdOutlineModeEditOutline
           className='book-item-button'
           onClick={() => handleEditBook(sortedBook)}
+          title={'Edit'}
         />
-        <MdClose className='book-item-button' onClick={deleteBookHandler} />
+        <MdClose className='book-item-button' onClick={deleteBookHandler} title={'Delete'} />
       </div>
     </div>
   );

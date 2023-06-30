@@ -15,37 +15,42 @@ const Form = ({ books, setBooks, isEditMode, bookToEdit, setIsEditMode, setBookT
     setYear(e.target.value);
   };
 
-  const addBookHandler = () => {
-    const newBook = {
-      title: title,
-      author: author,
-      year: year,
-      id: Math.random(),
-      favorite: false,
-      read: false,
-    };
-    setBooks([...books, newBook]);
-    setTitle('');
-    setAuthor('');
-    setYear('');
+  const addBookHandler = (e) => {
+    e.preventDefault();
+    if (title && author && year) {
+      const newBook = {
+        title: title,
+        author: author,
+        year: year,
+        id: Math.random(),
+        favorite: false,
+        read: false,
+      };
+      setBooks([...books, newBook]);
+      setTitle('');
+      setAuthor('');
+      setYear('');
+    }
   };
 
   const editBookHandler = () => {
-    const editedBook = {
-      title: title,
-      author: author,
-      year: year,
-      id: bookToEdit.id,
-      favorite: bookToEdit.favorite,
-      read: bookToEdit.read,
-    };
-    const updatedBooks = books.map((book) => (book.id === bookToEdit.id ? editedBook : book));
-    setBooks(updatedBooks);
-    setIsEditMode(false);
-    setBookToEdit(null);
-    setTitle('');
-    setAuthor('');
-    setYear('');
+    if (title && author && year) {
+      const editedBook = {
+        title: title,
+        author: author,
+        year: year,
+        id: bookToEdit.id,
+        favorite: bookToEdit.favorite,
+        read: bookToEdit.read,
+      };
+      const updatedBooks = books.map((book) => (book.id === bookToEdit.id ? editedBook : book));
+      setBooks(updatedBooks);
+      setIsEditMode(false);
+      setBookToEdit(null);
+      setTitle('');
+      setAuthor('');
+      setYear('');
+    }
   };
 
   useEffect(() => {
@@ -57,12 +62,13 @@ const Form = ({ books, setBooks, isEditMode, bookToEdit, setIsEditMode, setBookT
   }, [isEditMode, bookToEdit]);
 
   return (
-    <div className='form-container'>
+    <form className='form-container'>
       <div className='book-info'>
         <input
           className='book-title'
           placeholder='Назва книги'
           value={title}
+          required
           onChange={titleInputHandler}
         />
         <div style={{ display: 'flex', flex: 1 }}>
@@ -70,18 +76,26 @@ const Form = ({ books, setBooks, isEditMode, bookToEdit, setIsEditMode, setBookT
             className='book-author'
             placeholder='Автор'
             value={author}
+            required
             onChange={authorInputHandler}
           />
-          <input className='book-year' placeholder='Рік' value={year} onChange={yearInputHandler} />
+          <input
+            className='book-year'
+            placeholder='Рік'
+            value={year}
+            required
+            onChange={yearInputHandler}
+          />
         </div>
       </div>
       <button
         className='add-button'
         onClick={isEditMode && bookToEdit ? editBookHandler : addBookHandler}
+        title={isEditMode ? 'Save changes' : 'Add new book'}
       >
         {isEditMode ? 'ok' : '+'}
       </button>
-    </div>
+    </form>
   );
 };
 
