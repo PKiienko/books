@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import './App.css';
 import BookList from './BookList';
 import Form from './Form';
@@ -17,29 +17,29 @@ function App() {
     setBookToEdit(book);
   };
 
-  // const saveBooksToLocalStorage = () => {
-  //   if (books.length > 0) {
-  //     localStorage.setItem('books', JSON.stringify(books));
-  //   }
-  // };
+  const saveBooksToLocalStorage = useCallback(() => {
+    if (books.length > 0) {
+      localStorage.setItem('books', JSON.stringify(books));
+    }
+  }, [books]);
 
-  // const getBooksFromLocalStorage = () => {
-  //   if (localStorage.getItem('books') === null) {
-  //     localStorage.setItem('books', JSON.stringify([]));
-  //   } else {
-  //     let booksFromLocalStorage = JSON.parse(localStorage.getItem('books'));
-  //     console.log('local:', booksFromLocalStorage);
-  //     setBooks(booksFromLocalStorage);
-  //   }
-  // };
+  const getBooksFromLocalStorage = () => {
+    if (localStorage.getItem('books') === null) {
+      localStorage.setItem('books', JSON.stringify([]));
+    } else {
+      let booksFromLocalStorage = JSON.parse(localStorage.getItem('books'));
+      console.log('local:', booksFromLocalStorage);
+      setBooks(booksFromLocalStorage);
+    }
+  };
 
-  // useEffect(() => {
-  //   getBooksFromLocalStorage();
-  // }, []);
+  useEffect(() => {
+    getBooksFromLocalStorage();
+  }, []);
 
-  // useEffect(() => {
-  //   saveBooksToLocalStorage();
-  // }, [books]);
+  useEffect(() => {
+    saveBooksToLocalStorage();
+  }, [books, saveBooksToLocalStorage]);
 
   return (
     <div className='app'>

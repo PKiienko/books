@@ -31,8 +31,10 @@ const BookItem = ({ sortedBook, books, setBooks, handleEditBook }) => {
     <div className='book-container'>
       <div className='book-item'>
         <h2>{sortedBook.title}</h2>
-        <h4>{sortedBook.author}</h4>
-        <h4>{sortedBook.year}</h4>
+        <div>
+          <h4>{sortedBook.author}</h4>
+          <h4>{sortedBook.year}</h4>
+        </div>
       </div>
       <div className='book-controls'>
         {sortedBook.favorite ? (

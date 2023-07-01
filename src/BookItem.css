@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 13rem;
-  height: 7rem;
+  width: 20rem;
+  height: 10rem;
   margin: 0.5rem;
   padding: 0.5rem;
   background: #ffffff;
@@ -23,8 +23,9 @@
 .book-item {
   display: flex;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-direction: column;
+  height: 100%;
 }
 
 .book-item h2,
@@ -39,3 +40,50 @@
 .book-item-button {
   color: #27568d;
 }
+
+/* .book-container {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  padding: 1rem;
+  background: #ffffff;
+  color: #333333;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 0.5rem;
+  overflow-wrap: anywhere;
+}
+
+.book-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.book-item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.book-item h2,
+.book-item h4 {
+  white-space: break-spaces;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-item h2 {
+  margin-bottom: 0.5rem;
+}
+
+.favorite {
+  color: red;
+}
+
+.book-item-button {
+  color: #27568d;
+  margin-left: 0.5rem;
+} */

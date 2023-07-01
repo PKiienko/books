@@ -3,4 +3,10 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  background: #93b8d6;
+  overflow-y: scroll;
+}
+
+.book-list::-webkit-scrollbar {
+  display: none;
 }

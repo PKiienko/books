@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import './Form.css';
 
 const Form = ({ books, setBooks, isEditMode, bookToEdit, setIsEditMode, setBookToEdit }) => {
   const [title, setTitle] = useState('');
