@@ -20,7 +20,8 @@
   flex-direction: column;
 }
 
-.book-item {
+.book-item,
+.modal-content {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
@@ -41,49 +42,32 @@
   color: #27568d;
 }
 
-/* .book-container {
-  display: flex;
-  flex-direction: column;
-  width: 20rem;
-  padding: 1rem;
-  background: #ffffff;
-  color: #333333;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  margin: 0.5rem;
-  overflow-wrap: anywhere;
-}
-
-.book-controls {
+.modal-actions {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin-top: 1rem;
+  justify-content: space-around;
+  width: 100%;
 }
 
-.book-item {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  margin-bottom: 1rem;
+.modal-button-confirm,
+.modal-button-cancel {
+  height: 2rem;
+  width: 5rem;
+  margin: 0 0.5rem;
+  font-size: large;
+  color: #ffffff;
+  background: #27568d;
+  border: 1px solid #27568d;
+  border-radius: 0.5rem;
 }
 
-.book-item h2,
-.book-item h4 {
-  white-space: break-spaces;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.modal-button-confirm:hover,
+.modal-button-cancel:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.book-item h2 {
-  margin-bottom: 0.5rem;
+.modal-button-confirm:active,
+.modal-button-cancel:active {
+  transform: scale(0.9);
 }
-
-.favorite {
-  color: red;
-}
-
-.book-item-button {
-  color: #27568d;
-  margin-left: 0.5rem;
-} */

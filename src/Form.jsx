@@ -68,7 +68,7 @@ const Form = ({ books, setBooks, isEditMode, bookToEdit, setIsEditMode, setBookT
       <div className='book-info'>
         <input
           className='book-title'
-          placeholder='Назва книги'
+          placeholder='Назва'
           value={title}
           onChange={titleInputHandler}
         />
